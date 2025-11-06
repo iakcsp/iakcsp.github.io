@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生活 - Lin114514的个人博客</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- 导航栏 -->
+<header>
+    <div class="container">
+        <nav>
+            <a href="../index.html" class="logo">
+                <img src="https://cdn.luogu.com.cn/upload/usericon/1392988.png" alt="博主头像">
+                <span>Lin114514的博客</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html#overview">概述</a>
+                <a href="../index.html#articles">文章</a>
+                <a href="../index.html#skills">技能栈</a>
+                <a href="../index.html#contact">联系我们</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- 主要内容 -->
+<main>
+    <div class="container">
+        <section class="fade-in">
+            <h2 class="section-title">其他分类文章</h2>
+            <div class="articles">
+                <p style="margin-bottom: 30px; color: var(--gray);">这里收录了所有分类中没有归类的文章。</p>
+
+                <a href="#" class="article-card">
+                    <h3>暂无文章</h3>
+                    <p></p>
+                    <div class="article-meta">
+                        <span><i class="fas fa-folder"></i> 其他</span>
+                        <span><i class="fas fa-calendar"></i> yyyy-mm-dd</span>
+                    </div>
+                </a>
+
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="../all.html" style="display: inline-block; text-decoration: none; color: var(--primary); border: 1px solid var(--primary); padding: 10px 20px; border-radius: 20px; transition: var(--transition);">
+                        查看全部文章 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- 页脚 -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>关于博主</h3>
+                <ul>
+                    <li><a href="../index.html#overview">个人简介</a></li>
+                    <li><a href="../index.html#skills">技能栈</a></li>
+                    <li><a href="../index.html#contact">联系方式</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>文章分类</h3>
+                <ul>
+                    <li><a href="coding.html">编程</a></li>
+                    <li><a href="practice.html">实践</a></li>
+                    <li><a href="life.html">生活</a></li>
+                    <li><a href="other.html">其他</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="../all.html">全部文章</a></li>
+                    <li><a href="../articles/example.html">示例文章</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Lin114514的个人博客. 保留所有权利.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // 滚动动画效果
+    document.addEventListener('DOMContentLoaded', function() {
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+
+        // 导航栏滚动效果
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.padding = '10px 0';
+            } else {
+                header.style.padding = '15px 0';
+            }
+        });
+    });
+</script>
+</body>
+</html>
