@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>示例 - Lin114514的个人博客</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- 导航栏 -->
+<header>
+    <div class="container">
+        <nav>
+            <a href="../index.html" class="logo">
+                <img src="https://cdn.luogu.com.cn/upload/usericon/1392988.png" alt="博主头像">
+                <span>Lin114514的博客</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html#overview">概述</a>
+                <a href="../index.html#articles">文章</a>
+                <a href="../index.html#skills">技能栈</a>
+                <a href="../index.html#contact">联系我们</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- 主要内容 -->
+<main>
+    <div class="container">
+        <section class="fade-in">
+            <article class="article-detail">
+                <div class="article-header">
+                    <h1>示例</h1>
+                    <div class="article-meta">
+                        <span><i class="fas fa-folder"></i> 其他</span>
+                        <span><i class="fas fa-calendar"></i> 2023-07-01</span>
+                        <span><i class="fas fa-user"></i> Lin114514</span>
+                    </div>
+                </div>
+
+                <div class="article-content">
+                    <p>这是一篇示例文章，用于展示各种HTML标签的测试效果。下面将展示不同类型的内容格式。</p>
+
+                    <h2>1. 标题测试</h2>
+                    <p>下面是不同级别的标题：</p>
+                    <h3>三级标题示例</h3>
+                    <h4>四级标题示例</h4>
+                    <h5>五级标题示例</h5>
+                    <h6>六级标题示例</h6>
+
+                    <h2>2. 文本格式测试</h2>
+                    <p>这是一段普通文本，包含<em>斜体文本</em>和<strong>粗体文本</strong>，以及<u>下划线文本</u>。</p>
+
+                    <h2>3. 列表测试</h2>
+                    <h3>无序列表：</h3>
+                    <ul>
+                        <li>列表项 1</li>
+                        <li>列表项 2</li>
+                        <li>列表项 3
+                            <ul>
+                                <li>子列表项 1</li>
+                                <li>子列表项 2</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>有序列表：</h3>
+                    <ol>
+                        <li>第一步</li>
+                        <li>第二步</li>
+                        <li>第三步
+                            <ol>
+                                <li>子步骤 1</li>
+                                <li>子步骤 2</li>
+                            </ol>
+                        </li>
+                    </ol>
+
+                    <h2>4. 代码测试</h2>
+                    <p>行内代码示例：<code>int main()</code> 是C++程序的入口函数。</p>
+
+                    <h3>代码块示例：</h3>
+                    <pre><code>// C++ 示例代码
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+    return 0;
+}</code></pre>
+
+                    <h2>5. 引用测试</h2>
+                    <blockquote>
+                        这是一段引用文本，通常用于引用名人名言或其他来源的内容。
+                        <br>— 来源未知
+                    </blockquote>
+
+                    <h2>6. 链接测试</h2>
+                    <p>这是一个链接到<a href="../index.html">首页</a>的示例，以及一个链接到<a href="../all.html">全部文章</a>的示例。</p>
+
+                    <h2>7. 图片测试</h2>
+                    <p>下面是博主头像的图片示例：</p>
+                    <p style="text-align: center;">
+                        <img src="https://cdn.luogu.com.cn/upload/usericon/1392988.png" alt="博主头像" style="width: 200px; height: 200px; border-radius: 50%;">
+                    </p>
+                </div>
+            </article>
+        </section>
+    </div>
+</main>
+
+<!-- 页脚 -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>关于博主</h3>
+                <ul>
+                    <li><a href="../index.html#overview">个人简介</a></li>
+                    <li><a href="../index.html#skills">技能栈</a></li>
+                    <li><a href="../index.html#contact">联系方式</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>文章分类</h3>
+                <ul>
+                    <li><a href="../classifi/coding.html">编程</a></li>
+                    <li><a href="../classifi/practice.html">实践</a></li>
+                    <li><a href="../classifi/life.html">生活</a></li>
+                    <li><a href="../classifi/other.html">其他</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="../all.html">全部文章</a></li>
+                    <li><a href="example.html">示例文章</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Lin114514的个人博客. 保留所有权利.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // 滚动动画效果
+    document.addEventListener('DOMContentLoaded', function() {
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+
+        // 导航栏滚动效果
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.padding = '10px 0';
+            } else {
+                header.style.padding = '15px 0';
+            }
+        });
+    });
+</script>
+</body>
+</html>

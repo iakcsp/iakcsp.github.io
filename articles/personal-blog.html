@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搭建个人博客 - Lin114514的个人博客</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- 导航栏 -->
+<header>
+    <div class="container">
+        <nav>
+            <a href="../index.html" class="logo">
+                <img src="https://cdn.luogu.com.cn/upload/usericon/1392988.png" alt="博主头像">
+                <span>Lin114514的博客</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html#overview">概述</a>
+                <a href="../index.html#articles">文章</a>
+                <a href="../index.html#skills">技能栈</a>
+                <a href="../index.html#contact">联系我们</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- 主要内容 -->
+<main>
+    <div class="container">
+        <section class="fade-in">
+            <article class="article-detail">
+                <div class="article-header">
+                    <h1>搭建个人博客</h1>
+                    <div class="article-meta">
+                        <span><i class="fas fa-folder"></i> 实践</span>
+                        <span><i class="fas fa-calendar"></i> 2025-11-05</span>
+                        <span><i class="fas fa-user"></i> Lin114514</span>
+                    </div>
+                </div>
+
+                <div class="article-content">
+                    <h2>前言</h2>
+                    <p>这篇文章教你手把手搭建个人博客</p>
+                    <h2>准备工作</h2>
+                    <blockquote>
+                    <ul>
+                        <li>一个<a href="https://www.github.com">Github</a>账号</li>
+                    </ul>
+                    </blockquote>
+                    <h2>创建仓库</h2>
+                    <p>进入Github主页，点击右上角的“+”，选择“New repository”(进不去就用Steam++加速器+Edge插件)</p>
+                    <p><img src="https://youke1.picui.cn/s1/2025/11/05/690b4e2401b7e.png" alt="创建仓库" height="300px" width="600px"></p>
+                    <p>进入创建仓库页面，填写仓库名(username.github.io 例如：lin114514.github.io)，其他默认即可，点击下面的“Create repository”</p>
+                    <p><img src="https://youke1.picui.cn/s1/2025/11/05/690b50eb53270.png" alt="填写仓库名" height="300px" width="600px"></p>
+                    <p>进入后创建文件，如图</p>
+                    <p><img src="https://youke1.picui.cn/s1/2025/11/05/690b516431297.png" alt="创建文件1" height="300px" width="600px"></p>
+                    
+
+                </div>
+            </article>
+        </section>
+    </div>
+</main>
+
+<!-- 页脚 -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>关于博主</h3>
+                <ul>
+                    <li><a href="../index.html#overview">个人简介</a></li>
+                    <li><a href="../index.html#skills">技能栈</a></li>
+                    <li><a href="../index.html#contact">联系方式</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>文章分类</h3>
+                <ul>
+                    <li><a href="../classifi/coding.html">编程</a></li>
+                    <li><a href="../classifi/practice.html">实践</a></li>
+                    <li><a href="../classifi/life.html">生活</a></li>
+                    <li><a href="../classifi/other.html">其他</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="../all.html">全部文章</a></li>
+                    <li><a href="example.html">示例文章</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Lin114514的个人博客. 保留所有权利.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // 滚动动画效果
+    document.addEventListener('DOMContentLoaded', function() {
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+
+        // 导航栏滚动效果
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.padding = '10px 0';
+            } else {
+                header.style.padding = '15px 0';
+            }
+        });
+    });
+</script>
+</body>
+</html>
