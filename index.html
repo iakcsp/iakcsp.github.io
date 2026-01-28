@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lin114514的个人网站</title>
+    <!-- 引入字体图标（箭头/外部链接等） -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+        }
+
+        :root {
+            --primary: #7b61ff;
+            --primary-light: #9a84ff;
+            --bg-main: #0f1118;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --bg-card-hover: rgba(255, 255, 255, 0.06);
+            --text-main: #f5f5f5;
+            --text-secondary: #b0b7c3;
+            --border: rgba(255, 255, 255, 0.08);
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --blur: blur(12px);
+            --radius: 16px;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(180deg, var(--bg-main), #161927);
+            color: var(--text-main);
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 页面容器 */
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 2.5rem;
+            background: var(--bg-card);
+            backdrop-filter: var(--blur);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            animation: fadeIn 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 站点标题 */
+        .site-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .site-logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        .site-logo i {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%,100% { transform: scale(1); }
+            50% { transform: scale(1.1); color: var(--primary-light); }
+        }
+
+        .site-desc {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* 链接分类 */
+        .link-group {
+            margin-bottom: 2rem;
+        }
+
+        .group-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-left: 0.8rem;
+            border-left: 3px solid var(--primary);
+            color: var(--text-main);
+        }
+
+        /* 链接列表 */
+        .link-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-main);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .link-item:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(123, 97, 255, 0.2);
+        }
+
+        .link-item i {
+            font-size: 1.2rem;
+            color: var(--primary);
+            width: 24px;
+            text-align: center;
+        }
+
+        .link-text {
+            flex: 1;
+        }
+
+        .link-name {
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .link-domain {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        /* 页脚 */
+        .site-footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .site-footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .site-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+                margin: 1rem 0;
+            }
+
+            .site-logo {
+                font-size: 2rem;
+            }
+
+            .link-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .link-list {
+                grid-template-columns: 1fr;
+            }
+
+            .site-header {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 站点头部 -->
+        <div class="site-header">
+            <h1 class="site-logo">
+                <i class="fas fa-link"></i>
+                Lin114514's 个人网站
+            </h1>
+            <p class="site-desc">-= lin114514 =-</p>
+        </div>
+
+        <!-- 我的站点分类（核心中转链接） -->
+        <div class="link-group">
+            <h2 class="group-title">我的站点</h2>
+            <div class="link-list">
+                <!-- 博客二级域名（核心中转目标） -->
+                <a href="https://blog.lin114514.top" class="link-item" target="_blank">
+                    <i class="fas fa-blog"></i>
+                    <div class="link-text">
+                        <div class="link-name">个人博客</div>
+                        <div class="link-domain">blog.lin114514.top</div>
+                    </div>
+                </a>
+                <!-- 主域名 -->
+                <a href="https://lin114514.top" class="link-item" target="_blank">
+                    <i class="fas fa-home"></i>
+                    <div class="link-text">
+                        <div class="link-name">主域名</div>
+                        <div class="link-domain">lin114514.top</div>
+                    </div>
+                </a>
+                <!-- 可添加更多二级域名 -->
+                <a href="#" class="link-item" target="_self">
+                    <i class="fas fa-code"></i>
+                    <div class="link-text">
+                        <div class="link-name">虚位以待......</div>
+                        <div class="link-domain">暂无......</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 常用工具分类（可扩展） -->
+        <div class="link-group">
+            <h2 class="group-title">常用工具</h2>
+            <div class="link-list">
+                <a href="https://github.com/js-gdo" class="link-item" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <div class="link-text">
+                        <div class="link-name">我的GitHub</div>
+                        <div class="link-domain">github.com/js-gdo</div>
+                    </div>
+                </a>
+                <a href="https://tool.lin114514.top" class="link-item" target="_blank">
+                    <i class="fas fa-wrench"></i>
+                    <div class="link-text">
+                        <div class="link-name">工具站</div>
+                        <div class="link-domain">tool.lin114514.top</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <div class="site-footer">
+            <p>Powered by <a href="https://iakcsp.github.io" target="_blank">GitHub Pages</a></p>
+            <p>© 2026 Lin114514. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <!-- 可选：添加地址栏子路径中转（如 /blog 直接跳转到博客） -->
+    <script>
+        // 子路径中转规则：iakcsp.github.io/xxx 直接跳转到对应地址
+        const pathRedirect = {
+            'blog': 'https://blog.lin114514.top',
+            'home': 'https://lin114514.top',
+            'github': 'https://github.com/iakcsp'
+        };
+
+        // 解析当前路径并执行中转
+        const currentPath = window.location.pathname.replace(/^\//, '').split('/')[0];
+        if (pathRedirect[currentPath]) {
+            window.location.href = pathRedirect[currentPath];
+        }
+    </script>
+</body>
+</html>
